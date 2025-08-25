@@ -4,12 +4,12 @@
 
 ```mermaid
 flowchart LR
-    A[👨‍💻 Developer] --> B[📝 Edit values.yaml<br/>image: nginx:1.22]
-    B --> C[📤 git push]
-    C --> D[🔄 Flux detects change<br/>every 1 minute]
-    D --> E[⬇️ Flux pulls new chart]
-    E --> F[🚀 Deploy to GKE<br/>Rolling update]
-    F --> G[✅ App updated<br/>nginx:1.22 running]
+    A[ ] Developer] --> B[ Edit values.yaml<br/>image: nginx:1.22]
+    B --> C[ git push]
+    C --> D[ Flux detects change<br/>every 1 minute]
+    D --> E[ Flux pulls new chart]
+    E --> F[ Deploy to GKE<br/>Rolling update]
+    F --> G[ App updated<br/>nginx:1.22 running]
 ```
 
 **Steps:**
@@ -22,12 +22,12 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A[👨‍💻 Developer] --> B[📝 Edit HelmRelease<br/>replicaCount: 3]
-    B --> C[📤 git push flux-app-delivery]
-    C --> D[🔄 Flux detects config change]
-    D --> E[⚙️ Apply new values]
-    E --> F[📈 Scale deployment]
-    F --> G[✅ App scaled<br/>3 replicas running]
+    A[ Developer] --> B[ Edit HelmRelease<br/>replicaCount: 3]
+    B --> C[ git push flux-app-delivery]
+    C --> D[ Flux detects config change]
+    D --> E[ Apply new values]
+    E --> F[ Scale deployment]
+    F --> G[ App scaled<br/>3 replicas running]
 ```
 
 **Steps:**

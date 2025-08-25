@@ -2,11 +2,11 @@
 
 ```mermaid
 flowchart LR
-    A[📁 GitRepository<br/>sample-app-helmrepository.yaml] --> B[📁 HelmRelease<br/>sample-app-helmrelease.yaml]
-    B --> C[🚀 App Deployed<br/>in sample-app namespace]
+    A[ GitRepository<br/>sample-app-helmrepository.yaml] --> B[ HelmRelease<br/>sample-app-helmrelease.yaml]
+    B --> C[ App Deployed<br/>in sample-app namespace]
     
-    D[🌐 External Helm Chart<br/>github.com/paraskanwarit/sample-app-helm-chart] --> B
-    E[📁 Namespace<br/>sample-app-namespace.yaml] --> C
+    D[ External Helm Chart<br/>github.com/paraskanwarit/sample-app-helm-chart] --> B
+    E[ Namespace<br/>sample-app-namespace.yaml] --> C
 ```
 
 ## What Each File Does

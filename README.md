@@ -2,14 +2,14 @@
 
 This repository contains GitOps configuration manifests for deploying applications to Kubernetes using FluxCD. It serves as the "delivery" layer in a GitOps architecture, defining how applications should be deployed without containing the application code itself.
 
-## 🏗️ Repository Architecture
+##  Repository Architecture
 
 This repository follows the GitOps pattern where:
 - **Infrastructure** is managed separately (gke-gitops-infra repository)
 - **Application code & charts** are in separate repositories (sample-app-helm-chart)
 - **Deployment configuration** is managed here (flux-app-delivery)
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 flux-app-delivery/
@@ -26,7 +26,7 @@ flux-app-delivery/
     └── diagram-change-workflow.md
 ```
 
-## 🔧 Kubernetes Objects Explained
+##  Kubernetes Objects Explained
 
 ### 1. Kustomization (`kustomization.yaml`)
 
@@ -99,7 +99,7 @@ spec:
   values: {}                          # Override chart default values
 ```
 
-## 🔄 How GitOps Works Here
+##  How GitOps Works Here
 
 ### 1. Initial Deployment Flow
 1. **Flux Source Controller** monitors this repository for changes
@@ -114,7 +114,7 @@ spec:
 2. **Configuration Updates**: When this repository is updated, Flux applies the new configuration
 3. **Automatic Reconciliation**: Flux continuously ensures deployed state matches desired state
 
-## 🚀 Usage Instructions
+##  Usage Instructions
 
 ### Making Changes
 
@@ -139,7 +139,7 @@ spec:
         memory: "512Mi"
 ```
 
-## 🔍 Monitoring & Troubleshooting
+##  Monitoring & Troubleshooting
 
 ### Check Flux Status
 ```bash
@@ -154,7 +154,7 @@ kubectl logs -n flux-system deployment/source-controller
 kubectl logs -n flux-system deployment/helm-controller
 ```
 
-## 🎯 Benefits of This Approach
+##  Benefits of This Approach
 
 ### Separation of Concerns
 - **Infrastructure**: Managed by platform team
@@ -167,12 +167,12 @@ kubectl logs -n flux-system deployment/helm-controller
 - **Recoverable**: Easy rollback via Git revert
 - **Secure**: No direct cluster access needed
 
-## 📚 Related Repositories
+##  Related Repositories
 
 - **fluxcd-gitops**: Infrastructure and Flux bootstrap
 - **sample-app-helm-chart**: Application Helm charts and templates
 
-## 🔗 Useful Commands
+##  Useful Commands
 
 ```bash
 # Watch Flux reconciliation
