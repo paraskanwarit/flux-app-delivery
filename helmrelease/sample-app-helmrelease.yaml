@@ -14,7 +14,7 @@ spec:
         name: sample-app-helm-chart
         namespace: flux-system
   values:
-    replicaCount: 1
+    replicaCount: 4
     image:
       repository: nginx
       tag: "1.25.2"
@@ -24,7 +24,7 @@ spec:
       port: 80
     env:
       - name: ENVIRONMENT
-        value: "production"
+        value: "test"
     resources:
       limits:
         cpu: 100m
